@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(){
+            a = parseInt(document.getElementById("t1").value)
+            b = parseInt(document.getElementById("t2").value)
+            c = a + b
+           document.getElementById("t3").value = c
+        }
+        function subs(){
+            a = parseInt(document.getElementById("t1").value)
+            b = parseInt(document.getElementById("t2").value)
+            c = a - b
+           document.getElementById("t3").value = c
+        }
+        function mul(){
+            a = parseInt(document.getElementById("t1").value)
+            b = parseInt(document.getElementById("t2").value)
+            c = a * b
+           document.getElementById("t3").value = c
+        }
+        function dev(){
+            a = parseInt(document.getElementById("t1").value)
+            b = parseInt(document.getElementById("t2").value)
+            c = a / b
+           document.getElementById("t3").value = c
+        }
+        function mod(){
+            a = parseInt(document.getElementById("t1").value)
+            b = parseInt(document.getElementById("t2").value)
+            c = a % b
+           document.getElementById("t3").value = c
+        }
+       
+    </script>
+
+    <label for="">Enter 1<sup>st</sup> No.</label>
+    <input type="text" id="t1"><br>
+    <label for="">Enter 2<sup>nd</sup> No.</label>
+    <input type="text" id="t2"><br>
+    <label for="">Result</label>
+    <input type="text" id="t3"><br>
+
+    <input type="button" id="b1" value="+" onclick="add()">
+    <input type="button" id="b2" value="-" onclick="subs()">
+    <input type="button" id="b3" value="*" onclick="mul()">
+    <input type="button" id="b4" value="/" onclick="dev()">
+    <input type="button" id="b5" value="%" onclick="mod()">
+    <button type="button" onclick="window.open('', '_self', ''); window.close();">Exit</button>
+    
+    
+</body>
+</html>

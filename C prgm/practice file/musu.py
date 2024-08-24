@@ -1,0 +1,2 @@
+name=sudhir
+print("name")

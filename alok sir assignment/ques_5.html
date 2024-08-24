@@ -1,0 +1,162 @@
+<!-- Question No.(v)
+    create a web-site of LNMI take various tools, functions. Also register  the domain, take support of hyperlink, form elements, tables, links frame etc. Do it on your laptop.  
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LNMI Website</title>
+    <style>
+        /* CSS styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #cd852d;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+        section {
+            padding: 20px 90px;
+            background-color:#dcd7d1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            border-bottom: #333 1px dotted;
+           
+        }
+        form{
+            height:  400px;
+            width: 350px;
+            border: black 2px solid;
+            border-radius: 10px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+      
+       
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LNMI PATNA</h1>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#courses">Courses</a>
+        <a href="#admission">Admission</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>About LNMI</h2>
+        <p>Welcome to LNMI, a leading institution in economic development and social change.</p>
+        <br>
+        <p>
+            “Bihar Institute of Economic Development” was established in 1973 to carry out research aimed at facilitating socio-economic development. In 1975, to preserve the memory of late Lalit Narayan Mishra, the then Union Railway Minister, the Institute was renamed as “Lalit Narayan Mishra Institute of Economic Development and Social Change (LNMI)” and very soon it diversified into education with courses in Office Management, Business Management, Marketing & Sales Management and Personnel Management & Industrial Relations. As the demand for the various Management Programmes changed with time, some of these courses were dropped, others modified, and new ones added. Later on, the Institute was taken over by the Government of Bihar.Presently, the Institute offers courses in Management and Computer Science with appropriate support systems.
+        </p>
+    </section>
+    <section id="courses">
+        <h2>Courses Offered</h2>
+        <table>
+            <tr>
+                <th>Course</th>
+                <th>Duration</th>
+            </tr>
+            <tr>
+                <td>BCA</td>
+                <td>3 years</td>
+            </tr>
+            <tr>
+                <td>MCA</td>
+                <td>2 years</td>
+            </tr>
+            <tr>
+                <td>BBA</td>
+                <td>3 years</td>
+            </tr>
+            <tr>
+                <td>MBA</td>
+                <td>2 years</td>
+            </tr>
+            
+          
+        </table>
+    </section>
+    <section id="admission">
+        <h2>Form with Table Layout</h2>
+        <form action="submit.php" method="post">
+            <table>
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" id="name" name="name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="name">Address:</label></td>
+                    <td><input type="text" id="address" name="address" required></td>
+               
+                <tr>
+                    <td><label for="course">Course:</label></td>
+                    <td>
+                        <select id="course" name="course" required>
+                            <option value="">Select</option>
+                            <option value="bca">BCA</option>
+                            <option value="bba">BBA</option>
+                            <option value="mca">MCA</option>
+                            <option value="mba">MBA</option>
+                            <option value="other">OTHER</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="message">Message:</label></td>
+                    <td><textarea id="message" name="message" rows="4" cols="30" required></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="Submit"></td>
+                </tr>
+            </table>
+        </form>
+        
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@lnmi.ac.in</p>
+        <p>Phone: +91 1234567890</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Lalit Narayan Mishra Institute of Economic Development & Social Change</p>
+    </footer>
+</body>
+</html>

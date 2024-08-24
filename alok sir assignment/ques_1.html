@@ -1,0 +1,43 @@
+
+<!-- Question No.(i)
+write or create a webpage le the example of the creating link with image.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link with Image Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Link with Image Example</h1>
+    <p>Click the image below to visit Amazon's website:</p>
+    <a href="https://www.amazon.com/" target="_blank">
+        <img src="amazon.jpeg" alt="Amazon Logo" width="200">
+    </a>
+
+
+    <style>
+        body {
+            
+            padding: 20px;
+            text-align: center;
+        }
+
+        img {
+            border: #333 2px solid;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</body>
+
+</html>

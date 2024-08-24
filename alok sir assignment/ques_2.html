@@ -1,0 +1,51 @@
+
+<!-- Question No.(ii)
+create a table, in the web-site. take help of different tags such as cell padding. create table rowspan and colspan.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Example</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Example Table</h2>
+    <table>
+        <tr>
+            <th colspan="2">Header Cell 1</th>
+            <th rowspan="2">Header Cell 2</th>
+            <th>Header Cell 3</th>
+        </tr>
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td rowspan="2">Row 1 & 2, Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+        </tr>
+        <tr>
+            <td colspan="4">Footer Cell, colspan 4</td>
+        </tr>
+    </table>
+</body>
+</html>

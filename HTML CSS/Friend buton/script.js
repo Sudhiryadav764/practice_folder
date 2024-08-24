@@ -1,0 +1,1 @@
+const fri = document.getElementById('')

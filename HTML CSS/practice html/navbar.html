@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+</head>
+<body>
+
+  <style>
+  *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'poppins',sans-serif;
+        }
+        body{
+            display: flex;
+            border: black 2px solid;
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color:rgb(162, 154, 154);
+            background-size: cover;
+        }
+        .header{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 100px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 99;
+        }
+
+        .logo{
+            font-size: 2cm;
+            color: #fff;
+            user-select: none;
+        }
+       
+        .navigation a {
+            position: relative;
+            font-size: 0.5cm;
+            text-decoration: none;
+            font: 500;
+            color:papayawhip;
+            margin-left:40px;
+            border: 2px solid transparent;
+        
+        }
+        .navigation a::after  {
+            align-items: center;
+            position: absolute;
+            background:papayawhip;
+           border-radius: 5px;
+          
+           transition: transform 1s;
+           
+        }
+        .navigation a:hover::after{
+           
+            border: 2px solid white;
+        }
+            .navigation .btnlogin{
+            height:30px;
+            width: 90px;
+            background: transparent;
+            border: 2px solid #fff;
+            outline: none;
+            border-color: papayawhip;
+            border-radius:6px;
+            cursor: pointer;
+            font-size: .4cm;
+            color: papayawhip;
+            font-weight: 400;
+            margin-left:40px;
+            transition: .8s;
+            }
+        .navigation .btnlogin:hover{
+           
+            color: #162938;
+            background-color: aqua;
+            border-color: black;
+        }
+  </style>
+   <header class="header">
+        <h2 class="Logo">Logo</h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">contact</a>
+            <button class="btnlogin">login</button>
+        </nav>
+    </header>  
+</body>
+</html>

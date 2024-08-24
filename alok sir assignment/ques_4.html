@@ -1,0 +1,85 @@
+<!-- Question No.(iv) 
+    Discuss different form elements with the other functions such as creating a table, creation of form.
+    -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Table Layout</title>
+</head>
+
+<body>
+    <h2>Form with Table Layout</h2>
+    <form action="submit.php" method="post">
+        <table>
+            <tr>
+                <td><label for="name">Name:</label></td>
+                <td><input type="text" id="name" name="name" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="name">Address:</label></td>
+                <td><input type="text" id="address" name="address" required></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender :</label></td>
+                <td><input type="radio" value="male" id="male" name="gender"> <label>Male</label>
+                    <input type="radio" value="female" id="female" name="gender"> <label>Female</label>
+                    <input type="radio" value="male" id="transgender" name="gender"> <label>Transgender</label>
+                </td>
+
+
+            </tr>
+            <tr>
+                <td><label for="course">Course:</label></td>
+                <td>
+                    <select id="course" name="course" required>
+                        <option value="">Select</option>
+                        <option value="bca">BCA</option>
+                        <option value="bba">BBA</option>
+                        <option value="mca">MCA</option>
+                        <option value="mba">MBA</option>
+                        <option value="other">OTHER</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="message">Message:</label></td>
+                <td><textarea id="message" name="message" rows="4" cols="30" required></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+           
+        }
+        form{
+            height:  400px;
+            width: 350px;
+            border: black 2px solid;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    </style>
+</body>
+
+</html>

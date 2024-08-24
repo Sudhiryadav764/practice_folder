@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Thumbnail Downloader</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .jumbotron {
+            background-color: #007bff;
+            color: white;
+        }
+        #thumbnailUrl {
+            margin-bottom: 10px;
+        }
+        #downloadBtn {
+            background-color: #28a745;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1 class="display-4">YouTube Thumbnail Downloader</h1>
+            <p class="lead">Download YouTube video thumbnails easily!</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="thumbnailUrl" placeholder="Enter YouTube Video URL">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="downloadBtn">Download Thumbnail</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <img src="" alt="Thumbnail" class="img-fluid" id="thumbnailImage" style="display: none;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js (required for Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function () {
+            var url = document.getElementById('thumbnailUrl').value;
+            var videoId = extractVideoId(url);
+
+            if (videoId) {
+                var thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+                document.getElementById('thumbnailImage').src = thumbnailUrl;
+                document.getElementById('thumbnailImage').style.display = 'block';
+            } else {
+                alert('Invalid YouTube Video URL');
+            }
+        });
+
+        function extractVideoId(url) {
+            var match = url.match(/[?&]v=([^&]+)/);
+            return match ? match[1] : null;
+        }
+    </script>
+</body>
+</html>

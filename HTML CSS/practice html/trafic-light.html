@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trafic light</title>
+</head>
+<body>
+    <div class="main">
+        <div style="background-color: green"></div>
+        <div style="background-color:yellow"></div>
+        <div style="background-color:red"></div>
+    </div>
+
+    <style>
+
+        .main{
+            height: 500px;
+            width: 150px;
+            border: 2px solid black;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+
+     .main div{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            border-radius: 50px;
+            transition: 1s;
+        }
+        .main div:hover{
+            scale: 1.1;
+        }
+    </style>
+</body>
+</html>
