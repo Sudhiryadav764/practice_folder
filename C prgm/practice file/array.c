@@ -6,17 +6,23 @@ struct person
     int id;
     char name[30];
     int age;
-}person p[5];
-int main()
-int i;
-for(i=0;i<=5;i++){
-    printf("Enter id,name & age respectively");
-    scanf("%d%d%d",&(p=1)->id,&(p+1)->name,&(p+1)->age);
+};
 
-}
-printf("Displaying information");
-for(i=0;i<=5;i++){
-    printf("id=%d\t name=%s \t age=%d \n",(p=1)->id,(p+1)->name,(p+1)->age);
+int main(){
+    struct person p[5]; // Declare the array of structures
+    int i;
+
+    // Input information
+    for(i = 0; i < 5; i++){
+        printf("Enter id, name & age respectively for person %d: ", i + 1);
+        scanf("%d %s %d", &p[i].id, p[i].name, &p[i].age);
+    }
+
+    // Display information
+    printf("Displaying information:\n");
+    for(i = 0; i < 5; i++){
+        printf("id = %d\t name = %s\t age = %d\n", p[i].id, p[i].name, p[i].age);
+    }
 
     return 0;
 }
